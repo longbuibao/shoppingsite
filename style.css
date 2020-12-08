@@ -190,6 +190,7 @@ nav {
     align-items: center;
     flex-direction: column;
     border-radius: 5px;
+    position: relative;
 }
 
 .login-form form {
@@ -219,4 +220,23 @@ nav {
 .green {
     background-color: seagreen;
     color: seashell;
+}
+
+.form-btns {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.form-btns a {
+    color: black;
+    font-size: 0.9rem;
+}
+
+.form-cancle {
+    position: absolute;
+    right: 20px;
+    top: 10px;
 }
