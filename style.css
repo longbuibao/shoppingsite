@@ -162,7 +162,7 @@ nav {
     display: none;
 }
 
-.search-bar-acticve {
+.search-bar-active {
     display: flex;
 }
 
@@ -180,7 +180,9 @@ nav {
     z-index: 102;
 }
 
-.login-form {
+.login-form,
+.sign-up-form,
+.forget-form {
     width: 400px;
     padding: 20px 10px;
     background-color: #ffffff;
@@ -193,7 +195,9 @@ nav {
     position: relative;
 }
 
-.login-form form {
+.login-form form,
+.sign-up-form form,
+.forget-form form {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,14 +205,18 @@ nav {
     width: 100%;
 }
 
-.login-form strong {
+.login-form strong,
+.sign-up-form strong,
+.forget-form strong {
     font-size: 2rem;
     margin: 2px 7px 7px 7px;
     text-transform: uppercase;
     letter-spacing: 0.5;
 }
 
-.login-form input {
+.login-form input,
+.sign-up-form input,
+.forget-form input {
     width: 90%;
     height: 45px;
     margin: 6px;
@@ -239,4 +247,38 @@ nav {
     position: absolute;
     right: 20px;
     top: 10px;
+}
+
+.login-form,
+.sign-up-form,
+.forget-form,
+.form {
+    display: none;
+}
+
+.sign-up-active {
+    display: flex;
+    animation: fade 0.3s;
+}
+
+.forget-active {
+    display: flex;
+    animation: fade 0.3s;
+}
+
+.user-active,
+.user-active .login-form,
+.sign-up-active .sign-up-form,
+.forget-active .forget-form {
+    display: flex;
+    animation: fade 0.3s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
