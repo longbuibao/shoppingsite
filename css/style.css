@@ -301,6 +301,14 @@ nav {
     background-image: url(../images/slides/slider_3.png);
 }
 
+.f-slide-2 {
+    background-image: url(../images/slides/slider_2.jpg);
+}
+
+.f-slide-3 {
+    background-image: url(../images/slides/slider_1.png);
+}
+
 .slider-text-container {
     width: 80%;
     height: 90%;

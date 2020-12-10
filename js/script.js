@@ -26,17 +26,15 @@ $(document).on('click', '.haveAccount', function() {
     })
     //forgot form show up
 $(document).on('click', '.forget', function() {
-    $('.form').addClass('forget-active');
-    $('.form').removeClass('user-active');
-})
-
-$("#slideshow > div:gt(0)").hide();
-
-setInterval(function() {
-    $('#slideshow > div:first')
-        .fadeOut(1000)
-        .next()
-        .fadeIn(1000)
-        .end()
-        .appendTo('#slideshow');
-}, 3000);
+        $('.form').addClass('forget-active');
+        $('.form').removeClass('user-active');
+    })
+    // slider
+$(document).ready(function() {
+    $('#adaptive').lightSlider({
+        adaptiveHeight: true,
+        item: 1,
+        slideMargin: 0,
+        loop: true
+    });
+});
