@@ -1,0 +1,43 @@
+
+<ul id="autoWidth" class="cs-hidden">
+            <li class="item">
+                <img src="./images/feature_1.jpg" alt="">
+                <span>T-Shirt</span>
+            </li>
+            <li class="item">
+                <img src="./images/feature_1.jpg" alt="">
+                <span>T-Shirt</span>
+            </li>
+            <li class="item">
+                <img src="./images/feature_1.jpg" alt="">
+                <span>T-Shirt</span>
+            </li>
+            <li class="item">
+                <img src="./images/feature_1.jpg" alt="">
+                <span>T-Shirt</span>
+            </li>
+            <li class="item">
+                <img src="./images/feature_1.jpg" alt="">
+                <span>T-Shirt</span>
+            </li>
+            <li class="item">
+                <img src="./images/feature_1.jpg" alt="">
+                <span>T-Shirt</span>
+            </li>
+        </ul>
+
+
+
+
+        $(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        autoWidth: true,
+        loop: true,
+        onSliderLoad: function() {
+            $('#autoWidth').removeClass('cS-hidden');
+        }
+    });
+});
+        
+        
+               

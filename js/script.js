@@ -33,8 +33,21 @@ $(document).on('click', '.forget', function() {
 $(document).ready(function() {
     $('#adaptive').lightSlider({
         adaptiveHeight: true,
+        auto: true,
         item: 1,
         slideMargin: 0,
-        loop: true
+        loop: true,
+        pauseOnHover: true
+    });
+});
+//-------------------------script for feature-------------------
+$(document).ready(function() {
+    $('#autoWidth').lightSlider({
+        adaptiveHeight: true,
+        auto: true,
+        item: 4,
+        slideMargin: -10,
+        loop: true,
+        pauseOnHover: true
     });
 });
