@@ -45,8 +45,8 @@ $(document).ready(function() {
     $('#autoWidth').lightSlider({
         adaptiveHeight: true,
         auto: true,
-        item: 4,
-        slideMargin: -10,
+        item: 5,
+        slideMargin: 0,
         loop: true,
         pauseOnHover: true
     });

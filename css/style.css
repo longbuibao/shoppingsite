@@ -357,7 +357,8 @@ nav {
     align-items: center;
 }
 
-.feature-heading h2 {
+.feature-heading h2,
+.arrival-heading strong {
     text-transform: uppercase;
     border: 1px solid rgba(0, 0, 0, 0.5);
     padding: 10px;
@@ -380,4 +381,97 @@ nav {
 #autoWidth {
     display: flex;
     justify-content: center !important;
+    margin: 50px;
+}
+
+.new-arrival {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrival-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.arrival-heading strong {
+    color: #ffffff;
+    background-color: #333333;
+}
+
+.arrival-heading p {
+    color: #808080;
+    margin: 20px;
+    font-size: 0.9rem;
+}
+
+.product-container {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.product-box {
+    display: flex;
+    flex-grow: 0.5;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #880088;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.product-img {
+    width: 200px;
+    height: 200px;
+    margin: 5px;
+    cursor: pointer;
+    position: relative;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.product-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.product-box:hover {
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.7);
+}
+
+.add-cart {
+    position: absolute;
+    right: -20px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    background-color: aquamarine;
+    box-shadow: 4px 2px 30px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.add-cart:hover {
+    background-color: salmon;
+}
+
+.product-box:hover .add-cart {
+    display: flex;
 }
