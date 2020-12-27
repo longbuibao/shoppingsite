@@ -130,31 +130,85 @@ $(document).on('click', '.sizeS, .sizeM, .sizeXL', function(event) {
 //number of products in cart
 $(document).on('click', '.myButton', function() {
     quantity = $('#inputNumber').val();
-    console.log(srcOfImg, sizeProduct, quantity);
     localStorage.setItem('numberOfProducts', parseInt(quantity) + parseInt(localStorage.getItem('numberOfProducts')));
     $('.num-cart-product').html(parseInt(localStorage.getItem('numberOfProducts')));
     let id = localStorage.getItem('justClicked');
-    let productObj = JSON.parse(localStorage.getItem(id))[id];
-    console.log(id, productObj)
+    console.log(srcOfImg, sizeProduct, quantity)
+    let productObj = JSON.parse(localStorage.getItem(id));
     productObj.quantity = quantity;
     productObj.src = srcOfImg;
     localStorage.setItem(id, JSON.stringify(productObj));
+
 
 });
 //--------------------------end---------------------------------------
 //---------------------get money value-------------------------------
 let index;
 let productArray = [{
-    id: 0,
-    price: 150000,
-    src: './images/wuntitled-9-03.jpg',
-    name: 'T-SHIRT'
-}, ];
+        id: 0,
+        price: 150000,
+        src: './images/wuntitled-9-03.jpg',
+        name: 'T-SHIRT'
+    },
+    {
+        id: 1,
+        price: 400000,
+        src: './images/p-2.png',
+        name: 'T-SHIRT'
+    },
+    {
+        id: 2,
+        price: 400000,
+        src: './images/p-2.png',
+        name: 'T-SHIRT'
+    },
+    {
+        id: 3,
+        price: 150000,
+        src: './images/p-1.png',
+        name: 'T-SHIRT'
+    },
+    {
+        id: 4,
+        price: 400000,
+        src: './images/p-5.png',
+        name: 'T-SHIRT'
+    },
+    {
+        id: 5,
+        price: 500000,
+        src: './images/p-6.png',
+        name: 'T-SHIRT'
+    },
+    {
+        id: 6,
+        price: 400000,
+        src: './images/p-7.png',
+        name: 'T-SHIRT'
+    },
+    {
+        id: 7,
+        price: 400000,
+        src: './images/p-8.png',
+        name: 'T-SHIRT'
+    },
+    {
+        id: 8,
+        price: 350000,
+        src: './images/p-1.png',
+        name: 'T-SHIRT'
+    },
+    {
+        id: 9,
+        price: 200000,
+        src: './images/p-1.png',
+        name: 'T-SHIRT'
+    }
+];
 
 //click on product
 $(document).on('click', '.product-img', function(event) {
-    console.log(productArray[event.target.id]);
     localStorage.setItem('justClicked', event.target.id);
     index = event.target.id;
-    localStorage.setItem(index, JSON.stringify(productArray));
+    localStorage.setItem(index, JSON.stringify(productArray[index]));
 });
