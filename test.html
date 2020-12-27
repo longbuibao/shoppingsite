@@ -37,19 +37,14 @@
             Pretty cool eh? This slide is proof the content can be anything.
         </div>
     </div>
+
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
 </body>
+
+<script src="https://kit.fontawesome.com/996e98cae5.js" crossorigin="anonymous"></script>
 <script src="./jquery-3.5.1.js"></script>
 <script>
-    $("#slideshow > div:gt(0)").hide();
-
-    setInterval(function() {
-        $('#slideshow > div:first')
-            .fadeOut(1000)
-            .next()
-            .fadeIn(1000)
-            .end()
-            .appendTo('#slideshow');
-    }, 3000);
+    alert(localStorage.getItem('numberOfProducts'))
 </script>
 
 </html>
