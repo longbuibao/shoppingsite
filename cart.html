@@ -2,6 +2,7 @@
 <html lang="en">
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" href="./css/lightslider.css">
+<link rel="stylesheet" href="/css/cart.css">
 
 <head>
     <meta charset="UTF-8">
@@ -58,7 +59,6 @@
             <!--cart-icon icon gio hang-->
             <a href="/cart.html">
                 <i class="fas fa-shopping-cart" id="clickcart">
-                    <span class="num-cart-product"> 0 </span>
                 </i>
             </a>
         </div>
@@ -72,12 +72,89 @@
             </a>
         </div>
     </div>
+    <div style="margin-top: 50px;">
+        <main>
+            <div class="basket">
 
+                <div class="basket-labels">
+                    <ul>
+                        <li class="item item-heading">Sản phẩm</li>
+                        <li class="price">Giá</li>
+                        <li class="quantity">Số lượng</li>
+                        <li class="subtotal">Tạm tính</li>
+                    </ul>
+                </div>
+                <div class="basket-product">
+                    <div class="item">
+                        <div class="product-image">
+                            <img src="./images/bluekidsGirl6.jpg" alt="Placholder Image 2" class="product-frame">
+                        </div>
+                        <div class="product-details">
+                            <h1><strong><span class="item-quantity">1</span> x Thun bé gái</strong> Thun cotton</h1>
+                            <p><strong>Đen, Size 18</strong></p>
+                            <p>Mã sản phẩm - 232321939</p>
+                        </div>
+                    </div>
+                    <div class="price">250000.00</div>
+                    <div class="quantity">
+                        <input type="number" value="1" min="1" class="quantity-field">
+                    </div>
+                    <div class="subtotal">250000.00</div>
+                    <div class="remove">
+                        <button>Xóa</button>
+                    </div>
+                </div>
+                <div class="basket-product">
+                    <div class="item">
+                        <div class="product-image">
+                            <img src="./images/boys/boy3.webp" alt="Placholder Image 2" class="product-frame">
+                        </div>
+                        <div class="product-details">
+                            <h1><strong><span class="item-quantity">1</span> x Thun </strong> Bé trai</h1>
+                            <p><strong>Navy, Size 10</strong></p>
+                            <p>Mã sản phẩm - 232321939</p>
+                        </div>
+                    </div>
+                    <div class="price">250000.00</div>
+                    <div class="quantity">
+                        <input type="number" value="1" min="1" class="quantity-field">
+                    </div>
+                    <div class="subtotal">250000.00</div>
+                    <div class="remove">
+                        <button>Xóa</button>
+                    </div>
+                </div>
+            </div>
+            <aside>
+                <div class="summary">
+                    <div class="summary-total-items"><span class="total-items"></span> sản phẩm trong giỏ hàng của bạn</div>
+                    <div class="summary-subtotal">
+                        <div class="subtotal-title">Tạm tính</div>
+                        <div class="subtotal-value final-value" id="basket-subtotal">500000.00</div>
+                        <div class="summary-promo hide">
+                            <div class="promo-title">Promotion</div>
+                            <div class="promo-value final-value" id="basket-promo"></div>
+                        </div>
+                    </div>
+                    <div class="summary-delivery">
+                    </div>
+                    <div class="summary-total">
+                        <div class="total-title">Tổng cộng</div>
+                        <div class="total-value final-value" id="basket-total">500000.00</div>
+                    </div>
+                    <div class="summary-checkout">
+                        <button class="checkout-cta">Thanh toán</button>
+                    </div>
+                </div>
+            </aside>
+        </main>
+    </div>
 </body>
 
 <script src="https://kit.fontawesome.com/996e98cae5.js" crossorigin="anonymous"></script>
 <script src="./js/jquery-3.5.1.js"></script>
 <script src="./js/lightslider.js"></script>
 <script src="./js/script.js"></script>
+<script src="./js/cart.js"></script>
 
 </html>
