@@ -196,6 +196,7 @@ $(document).on('click', '.haveAccount', function() {
 $(document).on('click', '.forget', function() {
     $('.form').addClass('forget-active');
     $('.form').removeClass('user-active');
+    $('.login-form').addClass('login-none');
 })
 
 // slider
