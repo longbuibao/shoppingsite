@@ -1,0 +1,24 @@
+.boys-filter {
+    margin-top: 50px;
+    margin-left: 20px;
+    width: 20%;
+    position: fixed;
+}
+
+.boys-prod {
+    display: flex;
+    margin-top: 20px;
+}
+
+.new-arrival {
+    width: 70%;
+    margin-left: 20%;
+}
+
+.displayNone {
+    display: none;
+}
+
+.displayFlex {
+    display: flex;
+}

@@ -1,16 +1,178 @@
-//search bar
-$(document).on('click', '.search', function() {
-    $('.search-bar').addClass('search-bar-active');
-})
-$(document).on('click', '.search-cancle', function() {
-        $('.search-bar').removeClass('search-bar-active');
-    })
-    //login form
-$(document).on('click', '.user', function() {
-    $('.form').addClass('user-active');
-    $('.form').removeClass('cart-active');
+const girlProducts = [{
+        id: 0,
+        name: "Váy vàng banana",
+        price: "150.000 VND",
+        imgSrc: "./images/boys/boy1.webp"
+    },
+    {
+        id: 1,
+        name: "Xanh Smile",
+        price: "150.000 VND",
+        imgSrc: "./images/boys/boy2.jpg"
 
-})
+    },
+    {
+        id: 2,
+        name: "Xanh teen",
+        price: "150.000 VND",
+        imgSrc: "./images/boys/boy3.webp"
+    },
+    {
+        id: 3,
+        name: "Vàng Banana",
+        price: "150.000 VND",
+        imgSrc: "./images/boys/boy4.jpg"
+    },
+    {
+        id: 4,
+        name: "Short Đỏ",
+        price: "250.000 VND",
+        imgSrc: "./images/boys/boy5.jpg"
+    },
+    {
+        id: 5,
+        name: "Thun New York",
+        price: "450.000 VND",
+        imgSrc: "./images/boys/boy6.jpg"
+    },
+    {
+        id: 6,
+        name: "Hồng Caro",
+        price: "350.000 VND",
+        imgSrc: "./images/boys/boy7.jpg"
+    },
+    {
+        id: 7,
+        name: "Vai xanh",
+        price: "250.000 VND",
+        imgSrc: "./images/boys/boy8.jpg"
+    },
+    {
+        id: 8,
+        name: "Vai Hồng",
+        price: "250.000 VND",
+        imgSrc: "./images/boys/boy9.jpg"
+    },
+    {
+        id: 9,
+        name: "Chấm Bi",
+        price: "250.000 VND",
+        imgSrc: "./images/boys/boy10.jpg"
+    },
+    {
+        id: 10,
+        name: "Chấm Bi",
+        price: "350.000 VND",
+        imgSrc: "./images/boys/boy11.jpg"
+    },
+    {
+        id: 11,
+        name: "Thun Rộng",
+        price: "450.000 VND",
+        imgSrc: "./images/boys/boy12.jpg"
+    },
+    {
+        id: 12,
+        name: "Thun Vừa",
+        price: "450.000 VND",
+        imgSrc: "./images/boys/boy14.jpg"
+    },
+    {
+        id: 13,
+        name: "Thun Daisy",
+        price: "450.000 VND",
+        imgSrc: "./images/boys/boy13.jpg"
+    },
+]
+
+const boyProducts = [{
+        id: 14,
+        name: "Short da cá đỏ trắng",
+        price: "150.000 VND",
+        imgSrc: "./images/girls/girl1.jpg"
+    },
+    {
+        id: 15,
+        name: "Áo phông bé trai",
+        price: "150.000 VND",
+        imgSrc: "./images/girls/girl2.jpg"
+    },
+    {
+        id: 16,
+        name: "Phông What's Up",
+        price: "150.000 VND",
+        imgSrc: "./images/girls/girl3.jpg"
+    },
+    {
+        id: 17,
+        name: "Phông Vàng",
+        price: "150.000 VND",
+        imgSrc: "./images/girls/girl5.jpg"
+    },
+    {
+        id: 18,
+        name: "Polo",
+        price: "250.000 VND",
+        imgSrc: "./images/girls/girl6.jpg"
+    },
+    {
+        id: 19,
+        name: "Đồ bộ xanh",
+        price: "450.000 VND",
+        imgSrc: "./images/girls/girl7.jpg"
+    },
+    {
+        id: 20,
+        name: "Đồ bộ đỏ",
+        price: "350.000 VND",
+        imgSrc: "./images/girls/girl8.jpg"
+    },
+    {
+        id: 21,
+        name: "Đồ bộ trắng",
+        price: "250.000 VND",
+        imgSrc: "./images/girls/girl9.jpg"
+    },
+    {
+        id: 22,
+        name: "Đồ bộ awesome",
+        price: "250.000 VND",
+        imgSrc: "./images/girls/girl10.jpg"
+    },
+    {
+        id: 23,
+        name: "Đồ bộ chữ",
+        price: "250.000 VND",
+        imgSrc: "./images/girls/girl11.jpg"
+    },
+    {
+        id: 24,
+        name: "Ba lỗ bulls",
+        price: "350.000 VND",
+        imgSrc: "./images/girls/girl12.jpg"
+    },
+    {
+        id: 25,
+        name: "Đồ bộ sọc",
+        price: "450.000 VND",
+        imgSrc: "./images/girls/girl12.jpg"
+    },
+    {
+        id: 26,
+        name: "Đồ bộ sọc yellow",
+        price: "450.000 VND",
+        imgSrc: "./images/girls/girl12.jpg"
+    },
+    {
+        id: 27,
+        name: "Short kaki túi hộp",
+        price: "450.000 VND",
+        imgSrc: "./images/girls/girl13.jpg"
+    },
+]
+
+
+//login form
 $(document).on('click', '.form-cancle', function() {
         $('.form').removeClass('user-active');
         $('.form').removeClass('sign-up-active');
@@ -21,18 +183,22 @@ $(document).on('click', '.form-cancle', function() {
 $(document).on('click', '.sign-up-btn', function() {
     $('.form').addClass('sign-up-active');
     $('.form').removeClass('user-active');
+    $('.login-form').addClass('login-none');
+
 })
 $(document).on('click', '.haveAccount', function() {
-        $('.form').addClass('user-active');
-        $('.form').removeClass('sign-up-active');
-        $('.form').removeClass('forget-active');
-    })
-    //forgot form show up
+    $('.form').addClass('user-active');
+    $('.form').removeClass('sign-up-active');
+    $('.form').removeClass('forget-active');
+    $('.login-form').addClass('login-none');
+});
+//forgot form show up
 $(document).on('click', '.forget', function() {
-        $('.form').addClass('forget-active');
-        $('.form').removeClass('user-active');
-    })
-    // slider
+    $('.form').addClass('forget-active');
+    $('.form').removeClass('user-active');
+})
+
+// slider
 $(document).ready(function() {
     $('#adaptive').lightSlider({
         adaptiveHeight: true,
@@ -42,119 +208,4 @@ $(document).ready(function() {
         loop: true,
         pauseOnHover: true
     });
-});
-//-------------------------script for feature-------------------
-$(document).ready(function() {
-    $('#autoWidth').lightSlider({
-        adaptiveHeight: true,
-        auto: true,
-        item: 5,
-        slideMargin: 0,
-        loop: true,
-        pauseOnHover: true
-    });
-});
-
-// popup cart-items
-$(document).on('click', '#clickcart', function() {
-    $('.form').addClass('cart-active');
-});
-//addcart script
-if (!isNaN(parseInt(localStorage.getItem('numberOfProducts')))) {
-    let numberOfProducts = parseInt(localStorage.getItem('numberOfProducts'));
-    $('.num-cart-product').html(numberOfProducts);
-} else {
-    localStorage.setItem('numberOfProducts', '0')
-}
-
-$(document).on('click', '.add-cart', function() {
-    let numberOfProducts = parseInt(localStorage.getItem('numberOfProducts'));
-    numberOfProducts++;
-    $('.num-cart-product').html(numberOfProducts);
-    localStorage.setItem('numberOfProducts', numberOfProducts);
-});
-
-/*------------------------------------quantyti box--------------------*/
-jQuery('<div class="quantity-nav"><div class="quantity-button quantity-up">+</div><div class="quantity-button quantity-down">-</div></div>').insertAfter('.quantity input');
-jQuery('.quantity').each(function() {
-    var spinner = jQuery(this),
-        input = spinner.find('input[type="number"]'),
-        btnUp = spinner.find('.quantity-up'),
-        btnDown = spinner.find('.quantity-down'),
-        min = input.attr('min'),
-        max = input.attr('max');
-
-    btnUp.click(function() {
-        var oldValue = parseFloat(input.val());
-        if (oldValue >= max) {
-            var newVal = oldValue;
-        } else {
-            var newVal = oldValue + 1;
-        }
-        spinner.find("input").val(newVal);
-        spinner.find("input").trigger("change");
-    });
-
-    btnDown.click(function() {
-        var oldValue = parseFloat(input.val());
-        if (oldValue <= min) {
-            var newVal = oldValue;
-        } else {
-            var newVal = oldValue - 1;
-        }
-        spinner.find("input").val(newVal);
-        spinner.find("input").trigger("change");
-    });
-
-});
-//----------------------------checkbox for color-----------------------------------
-let srcOfImg;
-let sizeProduct;
-let quantity;
-$(document).on('click', '.whiteBox, .blackBox, .blueBox', function(event) {
-    let i = document.createElement('i');
-    let img = document.createElement('img');
-    i.setAttribute('class', 'fas fa-check-circle');
-    $('.whiteBox, .blackBox, .blueBox').empty();
-    event.target.appendChild(i);
-    document.getElementById('productImg').setAttribute('src', './images/' + event.target.id)
-    srcOfImg = event.target.id;
-});
-$(document).on('click', '.sizeS, .sizeM, .sizeXL', function(event) {
-    let i = document.createElement('i');
-    $('.sizeS, .sizeM, .sizeXL').css('background-color', 'white');
-    event.target.style.backgroundColor = 'red';
-    event.target.appendChild(i);
-    sizeProduct = event.target.id;
-});
-//number of products in cart
-$(document).on('click', '.myButton', function() {
-    quantity = $('#inputNumber').val();
-    console.log(srcOfImg, sizeProduct, quantity);
-    localStorage.setItem('numberOfProducts', parseInt(quantity) + parseInt(localStorage.getItem('numberOfProducts')));
-    $('.num-cart-product').html(parseInt(localStorage.getItem('numberOfProducts')));
-    let id = localStorage.getItem('justClicked');
-    let productObj = JSON.parse(localStorage.getItem(id))[id];
-    console.log(id, productObj)
-    productObj.quantity = quantity;
-    productObj.src = srcOfImg;
-    localStorage.setItem(id, JSON.stringify(productObj));
-
-});
-//--------------------------end---------------------------------------
-//---------------------get money value-------------------------------
-let index;
-let productArray = [{
-    id: 0,
-    price: 150000,
-    src: './images/wuntitled-9-03.jpg',
-    name: 'T-SHIRT'
-}, ];
-
-//click on product
-$(document).on('click', '.product-img', function(event) {
-    console.log(productArray[event.target.id]);
-    localStorage.setItem('justClicked', event.target.id);
-    index = event.target.id;
-    localStorage.setItem(index, JSON.stringify(productArray));
 });
