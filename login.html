@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/lightslider.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping site</title>
+</head>
+
+<body>
+    <div class="social-call">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+        <div class="phone">
+            <span>Gọi +8412345678 </span>
+        </div>
+    </div>
+    <div class="navigation fix-nav">
+        <!--logo-->
+        <a href="/index.html" class="logo">
+            <img src="./images/logo.svg" alt="">
+        </a>
+        <!--menu-->
+        <ul class="menu">
+            <li>
+                <a href="/">Trang chủ</a>
+            </li>
+            <li>
+                <a href="/boys.html">Bé trai</a>
+                <!--sale lable-->
+                <span class="sale-label">
+                    Sale
+                </span>
+            </li>
+            <li>
+                <a href="/girls.html">bé gái</a>
+            </li>
+            <li>
+                <a href="#">phụ kiện</a>
+            </li>
+        </ul>
+        <!-- ------------------------tao menu bar---------->
+        <!--right menu-->
+        <div class="right-menu">
+            <!--search-->
+            <a href="#" class="search">
+                <i class="fas fa-search"></i>
+            </a>
+            <!--user-->
+            <a href="/login.html" class="user">
+                <i class="far fa-user"></i>
+            </a>
+            <!--cart-icon icon gio hang-->
+            <a href="/cart.html">
+                <i class="fas fa-shopping-cart" id="clickcart">
+                </i>
+            </a>
+        </div>
+    </div>
+    <div class="search-bar">
+        <div class="search-input">
+            <input type="text" placeholder="Search For Product">
+            <!--cancle button-->
+            <a href="#" class="search-cancle">
+                <i class="fas fa-times"></i>
+            </a>
+        </div>
+    </div>
+    <div class="form">
+        <!------------------------------------------------login-->
+        <div class="login-form">
+            <!-- <a href="#" class="form-cancle">
+                <i class="fas fa-times"></i>
+            </a> -->
+            <strong>Đăng nhập</strong>
+            <form id="form" action="/cart.html">
+                <input type="email" placeholder="Email" name="email" required id="email">
+                <input type="password" placeholder="Mật khẩu" name="password" required id="password">
+                <input type="submit" value="Đăng nhập" class="green">
+                <div class="form-btns">
+                    <a href="#" class="forget">Quên mật khẩu</a>
+                    <a href="#" class="sign-up-btn">Đăng kí</a>
+                </div>
+            </form>
+        </div>
+        <div class="sign-up-form">
+            <!-- <a href="#" class="form-cancle">
+                <i class="fas fa-times"></i>
+            </a> -->
+            <strong>Đăng kí</strong>
+            <form>
+                <input type="text" placeholder="Tên đầy đủ" name="fullname" required>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="password" placeholder="Mật khẩu" name="password" required>
+                <input type="submit" value="Đăng kí" class="green">
+                <div class="form-btns">
+                    <a href="#" class="haveAccount">Đã có tài khoản?</a>
+                </div>
+            </form>
+        </div>
+        <!---------------------------------------forgot password-->
+        <div class="forget-form">
+            <!-- <a href="#" class="form-cancle">
+                <i class="fas fa-times"></i>
+            </a> -->
+            <strong>Quên mật khẩu</strong>
+            <form>
+                <input type="email" placeholder="Email" name="email" required>
+                <input type="submit" value="Khôi phục mật khẩu" class="green">
+                <div class="form-btns">
+                    <a href="#" class="haveAccount">Đã có tài khoản?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+<script src="https://kit.fontawesome.com/996e98cae5.js" crossorigin="anonymous"></script>
+<script src="./js/jquery-3.5.1.js"></script>
+<script src="./js/lightslider.js"></script>
+<script src="./js/script.js"></script>
+<script src="./js/login.js"></script>
+</html>
